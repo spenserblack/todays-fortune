@@ -1,0 +1,3 @@
+Since untracked files go in this folder, this helps prevent us from accidentally
+un-tracking and removing this folder, which can happen if we ever decide to migrate
+tracked files out of this folder.

@@ -1,0 +1,8 @@
+average
+bad
+catastrophic
+confusing
+good
+horrible
+intriguing
+wonderful
