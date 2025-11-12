@@ -1,5 +1,5 @@
-#ifndef FORTUNE_ENVIRONMENT_H
-#define FORTUNE_ENVIRONMENT_H
+#ifndef TODAYS_FORTUNE_ENVIRONMENT_H
+#define TODAYS_FORTUNE_ENVIRONMENT_H
 #include <stdlib.h>
 #include <stdbool.h>
 /**
