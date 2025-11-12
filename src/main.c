@@ -47,7 +47,7 @@ int main(void) {
   const char* adjective = get_random_adjective();
   const char* noun = get_random_noun();
   const char* verb = get_random_verb();
-  char *article = is_vowel(adjective[0]) ? "an" : "a";
+  const char *article = is_vowel(adjective[0]) ? "an" : "a";
 
   printf("You will %s %s %s %s.\n", verb, article, adjective, noun);
 }
