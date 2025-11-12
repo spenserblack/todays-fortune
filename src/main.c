@@ -44,10 +44,10 @@ int main(void) {
 
   srand(time_seed + username_seed);
 
-  const char* adjective = get_random_adjective();
-  const char* noun = get_random_noun();
-  const char* verb = get_random_verb();
-  const char *article = is_vowel(adjective[0]) ? "an" : "a";
+  const char *const adjective = get_random_adjective();
+  const char *const noun = get_random_noun();
+  const char *const verb = get_random_verb();
+  const char *const article = is_vowel(adjective[0]) ? "an" : "a";
 
   printf("You will %s %s %s %s.\n", verb, article, adjective, noun);
 }
