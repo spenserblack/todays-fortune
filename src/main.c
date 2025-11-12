@@ -6,11 +6,18 @@
 #include "words.h"
 
 bool is_vowel(const char letter) {
-  const char vowels[] = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
-  for (int i = 0; i < sizeof(vowels); ++i) {
-    if (letter == vowels[i]) {
+  switch (letter) {
+    case 'a':
+	case 'e':
+	case 'i':
+	case 'o':
+	case 'u':
+    case 'A':
+	case 'E':
+	case 'I':
+	case 'O':
+	case 'U':
       return true;
-    }
   }
   return false;
 }
