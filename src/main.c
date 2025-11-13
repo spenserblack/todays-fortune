@@ -2,8 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "cli.h"
 #include "environment.h"
 #include "words.h"
+#include "version.h"
 
 bool is_vowel(const char letter) {
 	switch (letter) {
@@ -40,7 +42,17 @@ unsigned int get_username_seed() {
 	#undef USERNAME_LEN
 }
 
-int main(void) {
+int main(int argc, char *argv[]) {
+	cli_parse(argc, argv);
+	if (show_help) {
+		printf("%s\n", help_message);
+		return 0;
+	}
+	if (show_version) {
+		printf("%s\n", version);
+		return 0;
+	}
+
 	time_t t = time(NULL);
 	struct tm *tm_info = localtime(&t);
 
@@ -57,4 +69,6 @@ int main(void) {
 	const char *const article = is_vowel(adjective[0]) ? "an" : "a";
 
 	printf("You will %s %s %s %s.\n", verb, article, adjective, noun);
+
+	return 0;
 }
